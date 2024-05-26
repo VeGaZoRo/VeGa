@@ -1,0 +1,64 @@
+{
+    "name": "ᯓ 𝚂𝙾𝚞𝚁𝚂 𝙰𝙵𝚁𝙾𝚃𝙾𝙾 𝅘𝅥𝅯",
+    "description": "- لـ تشغيـل الاغانـي والفيديـو والبثـوث المباشـرة فـي المكالمـات الصوتيـه والمرئيـة عـلى تيليجــرام",
+    "logo": "https://telegra.ph/file/04b2f1f1c808dc49db35b.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "Zelzal",
+    "MusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "env": {
+      "BOT_TOKEN": {
+        "description": "⦗ @Botfather ⦘ ↫ تـــوكـــن الـبـوت",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "⦗ ايـــدي المطـــور ⦘ ↫ مطـــور بـــوت الميـــوزك",
+        "value": "",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "⦗ V2 ⦘ ↫ كـود جلسـة الحسـاب المساعـد لـ الميـوزك",
+        "value": "",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "⦗ https://dashboard.heroku.com/account ⦘ ادخـل كود ايبـي كـي",
+        "value": "",
+        "required": false
+      },
+      "HEROKU_APP_NAME": {
+        "description": "⦗ اســـم التطبيـــق - نفـس اول مربـع بالقائمـة نسـخ لصـق حـروف انكلـش سمــول ⦗ صغيـره فقـط",
+        "value": "",
+        "required": false
+      },
+      "LOGGER_ID": {
+        "description": "ايـدي قروب السـجل",
+        "value": "-100",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "basic"
+          }
+      },
+      "stack": "container"
+  }
