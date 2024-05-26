@@ -4,7 +4,7 @@ from pyrogram.types import Message
 
 from VeGaMusic import app
 from VeGaMusic.misc import SUDOERS
-VeGaMusic
+from VeGaMusic.utils.database import autoend_off, autoend_on
 
 
 @app.on_message(command(["المغادره التلقائية", "المغادره التلقائيه"]) & SUDOERS)
