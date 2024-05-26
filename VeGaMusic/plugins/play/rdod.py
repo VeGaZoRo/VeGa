@@ -90,19 +90,23 @@ Programmed by :  @UI_VM
 '''
 @app.on_message(filters.regex("^اضف رد$") & filters.group)
 async def adf_rd(client, message):
-    get = await get_rtba(message.chat.id, message.from_user.id)
-    if not get: return await message.reply("• هذا االأمر لا يخصك")
-    MATRIXAR1 = await app.MATRIXAR(
-    message.chat.id, "ارسل كلمة الرد", reply_to_message_id=message.id, filters=filters.text & filters.user(message.from_user.id))
-    text = MATRIXAR1.text
-    MATRIXAR2 = await app.MATRIXAR(
-    message.chat.id, "ارسل جواب الرد", reply_to_message_id=MATRIXAR1.id, filters=filters.user(message.from_user.id))
-    copy = await MATRIXAR2.copy(LOG)
-    rd = copy.id
-    a = add_rd(text, message.chat.id, rd)
-    if a: return await MATRIXAR2.reply("تم اضافة الرد بنجاح")
-    else: return await MATRIXAR2.reply("حدث خطأ")
+    user_data = await get_rtba(message.chat.id, message.from_user.id)
+    if not user_data:
+        return await message.reply("• هذا االأمر لا يخصك")
 
+    MATRIXAR1 = await app.MATRIXAR(
+        message.chat.id, "ارسل كلمة الرد", reply_to_message_id=message.id, filters=filters.text & filters.user(message.from_user.id))
+    text = MATRIXAR1.text
+
+    MATRIXAR2 = await app.MATRIXAR(
+        message.chat.id, "ارسل جواب الرد", reply_to_message_id=MATRIXAR1.id, filters=filters.user(message.from_user.id))
+    copy = await MATRIXAR2.copy(LOG)
+    rd_id = copy.id
+
+    if add_rd(text, message.chat.id, rd_id):
+        await MATRIXAR2.reply("تم اضافة الرد بنجاح")
+    else:
+        await MATRIXAR2.reply("حدث خطأ")
 '''
 Programmed by :  @UI_VM
    Channel -› • @T_Y_E_X
