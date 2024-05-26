@@ -11,7 +11,6 @@ from VeGaMusic.misc import sudo
 from VeGaMusic.plugins import ALL_MODULES
 from VeGaMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
-from VeGaMusic.plugins.play.azan import azkar
 
 
 async def init():
@@ -50,7 +49,7 @@ async def init():
     except:
         pass
     await Zoro.decorators()
-    LOGGER("ميــوزك فيجا").info("MatrixThon")
+    LOGGER("ميــوزك فيجا").info("VeGaThon")
     await idle()
     await app.stop()
     await userbot.stop()
