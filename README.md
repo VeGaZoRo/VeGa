@@ -43,4 +43,12 @@
 <a href="https://t.me/vegaOne"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
+━━━━━━━━━━━━━━━━━━━━
+
 - <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ᴢօꝛօ>_ᴠᴇɢᴧ](https://t.me/toxvega) AND [ᴢᴇꝛօ>_ᴠᴇɢᴧ](https://t.me/topvega)_ </b>
+
+━━━━━━━━━━━━━━━━━━━━
+
+<h1> <img src="https://raw.githubusercontent.com/zero/zero/master/resources/songs.gif" width="57px"> ᴄᴜʀʀᴇɴᴛʟʏ ᴏɴ sᴘᴏᴛɪғʏ </h1>
+
+[<img src="https://novatorem.visualbean.vercel.app/api/spotify" alt="Spotify" width="75%" />](https://open.spotify.com/user/d28p2msbxwzil9byvx5sql00z)
