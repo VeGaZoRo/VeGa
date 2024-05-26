@@ -39,15 +39,7 @@ async def init():
     LOGGER("ميــوزك فيجا").info("تم تحميل الاضافات ...✓")
     await userbot.start()
     await Zoro.start()
-    try:
-        await Zoro.stream_call("https://telegra.ph/file/29f784eb49d230ab62e9e.mp4")
-    except NoActiveGroupCall:
-        LOGGER("ميــوزك فيجا").info(
-            "خطأ .. قم بفتح المكالمة في مجموعة السجل الخاصه بك\n\nجارِ ايقاف بوت الميوزك . . ."
-        )
-        exit()
-    except:
-        pass
+
     await Zoro.decorators()
     LOGGER("ميــوزك فيجا").info("VeGaThon")
     await idle()
