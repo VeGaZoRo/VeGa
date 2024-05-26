@@ -25,7 +25,7 @@ txt = [
         
 
 
-@app.on_message(command(["بوت","يا بوت"], ""))
+@app.on_message(command(["بوت","يا بوت"]))
 
 async def khyrok(client: Client, message: Message):
 
