@@ -1,6 +1,6 @@
 import asyncio
 import random
-from AFROTOMusic import app
+from VeGaMusic import app
 from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup, Message)
 from pyrogram import filters, Client
 from VeGaMusic.plugins.play.filters import command
