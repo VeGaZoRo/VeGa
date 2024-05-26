@@ -556,7 +556,7 @@ class Call(PyTgCalls):
         return str(round(sum(pings) / len(pings), 3))
 
     async def start(self):
-        LOGGER("ميــوزك عفرتو").info("جارِ تحميل مكاتب الميوزك . . .\n")
+        LOGGER("ميــوزك فيجا").info("جارِ تحميل مكاتب الميوزك . . .\n")
         if config.STRING1:
             await self.one.start()
         if config.STRING2:
