@@ -1,3 +1,4 @@
+from VeGaMusic.plugins.play.filters import command
 from pyrogram import filters
 from pyrogram.types import Message
 
