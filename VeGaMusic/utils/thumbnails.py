@@ -129,7 +129,7 @@ async def get_thumb(videoid):
             )
             image4.text(
                 (670, 150),
-                "CODRA MUSIC",
+                "VeGa MUSIC",
                 fill="white",
                 font=font2,
                 stroke_width=4,
@@ -161,7 +161,7 @@ async def get_thumb(videoid):
             # description
             views = f"Views : {views}"
             duration = f"Duration : {duration} Mins"
-            channel = f"Channel : @UI_VM"
+            channel = f"Channel : @VeGaOne"
 
             image4.text((670, 450), text=views, fill="white", font=font4, align="left")
             image4.text(
