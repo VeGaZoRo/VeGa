@@ -3,7 +3,6 @@ from os import getenv
 
 from dotenv import load_dotenv
 from pyrogram import filters
-from utils import get_restarted
 
 super_sudoers = [5904216848]
 
