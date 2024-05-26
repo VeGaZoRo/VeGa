@@ -1,4 +1,3 @@
-
 import asyncio
 import os
 import random
@@ -87,7 +86,7 @@ async def get_thumb(videoid):
             background = enhancer.enhance(0.6)
             image2 = background
 
-            polygon = Image.open("VeGa/assets/AFYONA.png")
+            polygon = Image.open("VeGaMusic/assets/AFYONA.png")
 
             # changing polygon color
             im = polygon
