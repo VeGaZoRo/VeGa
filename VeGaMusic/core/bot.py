@@ -14,9 +14,6 @@ class Zoro(Client):
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
-            in_memory=True,
-            parse_mode=ParseMode.HTML,
-            max_concurrent_transmissions=7,
         )
 
     async def start(self):
@@ -42,12 +39,6 @@ class Zoro(Client):
             )
             exit()
 
-        a = await self.get_chat_member(config.LOGGER_ID, self.id)
-        if a.status != ChatMemberStatus.ADMINISTRATOR:
-            LOGGER(__name__).error(
-                "» قم برفـع البـوت مشـرفـاً بكافة الصلاحيات في مجموعـة السجـل"
-            )
-            exit()
         LOGGER("ميــوزك فيجا").info(f" تم بدء تشغيل البوت {self.name} ...✓")
 
     async def stop(self):
