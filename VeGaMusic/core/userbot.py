@@ -56,17 +56,16 @@ class Userbot(Client):
             except:
                 pass
             assistants.append(1)
-            try:
-                await self.one.send_message(config.LOGGER_ID, "» تم تشغيـل الحسـاب المسـاعـد .. بنجـاح ✅")
-            except:
-                LOGGER(__name__).error(
-                    "Assistant Account 1 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!"
+            get_me = await self.one.get_me()
+            self.one.username = get_me.username
+            self.one.id = get_me.id
+            assistantids.append(get_me.id)
+            if get_me.last_name:
+                self.one.name = (
+                    get_me.first_name + " " + get_me.last_name
                 )
-                exit()
-            self.one.id = self.one.me.id
-            self.one.name = self.one.me.first_name
-            self.one.username = self.one.me.username
-            assistantids.append(self.one.id)
+            else:
+                self.one.name = get_me.first_name
             LOGGER("ميــوزك فيجا").info(f"تم بدء تشغيل الحساب المساعد {self.one.name} ...✓")
 
         if config.STRING2:
