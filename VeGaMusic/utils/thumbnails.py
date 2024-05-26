@@ -117,10 +117,10 @@ async def get_thumb(videoid):
             image2.paste(polygon, (0, 0), mask=polygon)
 
             # fonts
-            font1 = ImageFont.truetype("VeGa/assets/font2.ttf", 30)
-            font2 = ImageFont.truetype("VeGa/assets/font2.ttf", 70)
-            font3 = ImageFont.truetype("VeGa/assets/font2.ttf", 40)
-            font4 = ImageFont.truetype("VeGa/assets/font2.ttf", 35)
+            font1 = ImageFont.truetype("VeGaMusic/assets/font2.ttf", 30)
+            font2 = ImageFont.truetype("VeGaMusic/assets/font2.ttf", 70)
+            font3 = ImageFont.truetype("VeGaMusic/assets/font2.ttf", 40)
+            font4 = ImageFont.truetype("VeGaMusic/assets/font2.ttf", 35)
 
             image4 = ImageDraw.Draw(image2)
             image4.text(
