@@ -63,7 +63,7 @@ txt = [
         
 
 
-@app.on_message(command(["صراحه","صراحة"], ""))
+@app.on_message(command(["صراحه","صراحة"]))
 
 async def sraha(client: Client, message: Message):
 
