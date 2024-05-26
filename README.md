@@ -2,15 +2,26 @@
     ──「 فيجا | VEGA 」──
 </h2>
 
+━━━━━━━━━━━━━━━━━━━━
+
 <p align="center">
   <img src="https://graph.org/file/cd2bf6082397483175f17.jpg">
 </p>
 
+━━━━━━━━━━━━━━━━━━━━
 
+<p align="center">
+    <b>ᴠɪsɪᴛᴏʀs</b><br>
+ -->    <img align="middle" src="https://profile-counter.glitch.me/zero/count.svg" />
+</p>
+
+━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
   <img src="https://telegra.ph/file/36be820a8775f0bfc773e.jpg">
 </p>
+
+━━━━━━━━━━━━━━━━━━━━
 
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
