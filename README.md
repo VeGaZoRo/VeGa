@@ -49,6 +49,8 @@
 
 ━━━━━━━━━━━━━━━━━━━━
 
-<h1> <img src="https://raw.githubusercontent.com/zero/zero/master/resources/songs.gif" width="57px"> ᴄᴜʀʀᴇɴᴛʟʏ ᴏɴ sᴘᴏᴛɪғʏ </h1>
+<h2 align="center">
+    ──「 ᴄᴜʀʀᴇɴᴛʟʏ ᴏɴ sᴘᴏᴛɪғʏ 」──
+</h2>
 
 [<img src="https://novatorem.visualbean.vercel.app/api/spotify" alt="Spotify" width="75%" />](https://open.spotify.com/user/d28p2msbxwzil9byvx5sql00z)
