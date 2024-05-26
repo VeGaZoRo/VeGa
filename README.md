@@ -12,7 +12,7 @@
 
 <p align="center">
     <b>ᴠɪsɪᴛᴏʀs</b><br>
- -->    <img align="middle" src="https://profile-counter.glitch.me/zero/count.svg" />
+ -->    <img align="middle" src="https://profile-counter.glitch.me/VeGa/count.svg" />
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━
