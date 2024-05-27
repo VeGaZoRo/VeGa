@@ -70,7 +70,7 @@ def stream_markup_timer(_, chat_id, played, dur):
         ],
         [
         InlineKeyboardButton(
-                 "ᴠᴇɢᴧ", url=f"https://t.me/CMG_5S"
+                 "ᴠᴇɢᴧ", url=f"https://t.me/VeGaOne"
             ),
         ],
         [
@@ -95,7 +95,7 @@ def stream_markup(_, chat_id):
         ],
         [
         InlineKeyboardButton(
-                 "ᴠᴇɢᴧ", url=f"https://t.me/CMG_5S"
+                 "ᴠᴇɢᴧ", url=f"https://t.me/VeGaOne"
             ),
         ],
         [
