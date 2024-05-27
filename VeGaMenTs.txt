@@ -24,7 +24,6 @@ tgcrypto
 unidecode
 numpy
 pytz
-os
 dnspython
 youtube-search
 youtube-search-python
