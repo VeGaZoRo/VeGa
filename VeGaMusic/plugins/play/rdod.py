@@ -88,12 +88,9 @@ async def botslist(_, message):
 Programmed by :  @UI_VM
    Channel -› • @T_Y_E_X
 '''
-get_rtba = {}
+
 @app.on_message(filters.regex("^اضف رد$") & filters.group)
 async def add_rd(client, message):
-    user_data = await get_rtba(message.chat.id, message.from_user.id)
-    if not user_data:
-        return await message.reply("• هذا االأمر لا يخصك")
 
     MATRIXAR1 = await app.MATRIXAR(
         message.chat.id, "ارسل كلمة الرد", reply_to_message_id=message.id, filters=filters.text & filters.user(message.from_user.id))
