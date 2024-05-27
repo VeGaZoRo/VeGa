@@ -393,7 +393,7 @@ async def PROMOTE(c:Client,m:Message):
 
 
 
-@app.on_message(command(["رفع"],[""]),group=1)
+@app.on_message(command(["رفع"]),group=1)
 async def New(c:Client,m:Message):
 	Ra = await m.chat.get_member(m.from_user.id)
 	if Ra.status == ChatMemberStatus.OWNER:
