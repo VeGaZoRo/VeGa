@@ -1,15 +1,12 @@
 import math
-
+from config import *
 import config
-from VeGaMusic import app 
-
 from pyrogram.types import InlineKeyboardButton
 
-from VeGaMusic.utils.formatters import time_to_seconds
+from VeGaXMusic.utils.formatters import time_to_seconds
 
 
 def track_markup(_, videoid, user_id, channel, fplay):
-   
     buttons = [
         [
             InlineKeyboardButton(
@@ -30,7 +27,6 @@ def track_markup(_, videoid, user_id, channel, fplay):
     ]
     return buttons
 
-
 def stream_markup_timer(_, chat_id, played, dur):
     played_sec = time_to_seconds(played)
     duration_sec = time_to_seconds(dur)
@@ -41,15 +37,15 @@ def stream_markup_timer(_, chat_id, played, dur):
     elif 10 < umm < 20:
         bar = "──⧂━━━━━━━━━━━"
     elif 20 <= umm < 30:
-        bar = "────⧂━━━━━━━━━"
+        bar = "───⧂━━━━━━━━━━"
     elif 30 <= umm < 40:
-        bar = "─────⧂━━━━━━━━"
+        bar = "────⧂━━━━━━━━━"
     elif 40 <= umm < 50:
-        bar = "──────⧂━━━━━━━"
+        bar = "─────⧂━━━━━━━━"
     elif 50 <= umm < 60:
-        bar = "────────⧂━━━━━"
+        bar = "──────⧂━━━━━━━"
     elif 60 <= umm < 70:
-        bar = "─────────⧂━━━"
+        bar = "────────⧂━━━━━"
     elif 70 <= umm < 80:
         bar = "──────────⧂━━━"
     elif 80 <= umm < 95:
@@ -57,7 +53,7 @@ def stream_markup_timer(_, chat_id, played, dur):
     else:
         bar = "─────────────⧂"
     buttons = [
-                        [
+        [
             InlineKeyboardButton(
                 text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
@@ -70,7 +66,7 @@ def stream_markup_timer(_, chat_id, played, dur):
         ],
         [
         InlineKeyboardButton(
-                 "ᴠᴇɢᴧ", url=f"https://t.me/VeGaOne"
+                 "ᴠᴇɢᴧ", url=SUPPORT_CHANNEL
             ),
         ],
         [
@@ -79,15 +75,9 @@ def stream_markup_timer(_, chat_id, played, dur):
     ]
     return buttons
 
-
 def stream_markup(_, chat_id):
     buttons = [
-                [
-            InlineKeyboardButton(
-                text=f"{played} {bar} {dur}",
-                callback_data="GetTimer",
-            )
-        ],[
+        [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
@@ -95,7 +85,7 @@ def stream_markup(_, chat_id):
         ],
         [
         InlineKeyboardButton(
-                 "ᴠᴇɢᴧ", url=f"https://t.me/VeGaOne"
+                 "ᴠᴇɢᴧ", url=SUPPORT_CHANNEL
             ),
         ],
         [
@@ -110,11 +100,11 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
-                callback_data=f"ModyPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
+                callback_data=f"ModyPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
                 text=_["P_B_2"],
-                callback_data=f"ModyPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
+                callback_data=f"ModyPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
             ),
         ],
         [
@@ -168,7 +158,7 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
                 callback_data=f"forceclose {query}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="𖣂 𝒓𝒆𝒔𝒖𝒎𝒆 𖣂",
+                text="▷",
                 callback_data=f"slider F|{query_type}|{query}|{user_id}|{channel}|{fplay}",
             ),
         ],
