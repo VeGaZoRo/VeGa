@@ -90,7 +90,7 @@ Programmed by :  @UI_VM
 '''
 get_rtba = {}
 @app.on_message(filters.regex("^اضف رد$") & filters.group)
-async def adf_rd(client, message):
+async def add_rd(client, message):
     user_data = await get_rtba(message.chat.id, message.from_user.id)
     if not user_data:
         return await message.reply("• هذا االأمر لا يخصك")
