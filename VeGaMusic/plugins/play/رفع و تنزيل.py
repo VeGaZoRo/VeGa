@@ -236,13 +236,13 @@ async def mallekandv(client, message):
         
         
         
-@app.on_message(command(['رتبتي'], prefixes=""), group=2889933100)
+@app.on_message(command(['رتبتي'][]), group=2889933100)
 async def ororhe(client: Client, message: Message):
     me = await client.get_me()
     bot_username = me.username
     bot_name = me.first_name
     italy = message.from_user.mention
-    button = InlineKeyboardButton("ᴠᴇɢᴀ", url=f"https://t.me/KINGVEGA")
+    button = InlineKeyboardButton("ᴠᴇɢᴀ", url=f"https://t.me/vegaone")
     keyboard = InlineKeyboardMarkup([[button]])
     user_id = message.from_user.id
     chat_id = message.chat.id
