@@ -12,7 +12,6 @@ motor==3.0.0
 pillow
 psutil
 telegraph
-time
 py-tgcalls==0.9.7
 pykeyboard
 pyrogram==2.0.106
