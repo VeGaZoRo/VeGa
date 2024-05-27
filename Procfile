@@ -1,1 +1,1 @@
-worker: bash start
+worker: start VeGa

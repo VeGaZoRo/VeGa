@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/start
 
 pprint (){
 	cred='\033[0;31m'
@@ -65,7 +65,7 @@ packages(){
 node(){
 	command -v npm &>/dev/null && return
 	pprint "Installing Nodejs and Npm..  "
-	curl -fssL https://deb.nodesource.com/setup_19.x | sudo -E bash - &>nodelog.txt &&
+	curl -fssL https://deb.nodesource.com/setup_19.x | sudo -E start - &>nodelog.txt &&
 	sudo apt install -y nodejs &>>nodelog.txt &&
 	sudo npm i -g npm &>>nodelog.txt &&
 	pprint "SUCCESS!\n" "cgreen" || (pprint "FAIL.\n" "cred"; exit 1)
@@ -123,4 +123,4 @@ OWNER_ID = $ownid""" > .env
 clear
 
 pprint "\n\n\nThanks for using VeGaMusic installer, your vars have been saved successfully ! \nIf you wanna add more variables add them in your env by : vi .env"
-pprint "\n\nNow you can start the bot by : bash start\n\n"
+pprint "\n\nNow you can start the bot by : start VeGa\n\n"
