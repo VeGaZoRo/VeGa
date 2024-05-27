@@ -88,6 +88,7 @@ async def botslist(_, message):
 Programmed by :  @UI_VM
    Channel -› • @T_Y_E_X
 '''
+get_rtba = {}
 @app.on_message(filters.regex("^اضف رد$") & filters.group)
 async def adf_rd(client, message):
     user_data = await get_rtba(message.chat.id, message.from_user.id)
