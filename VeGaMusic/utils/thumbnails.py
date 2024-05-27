@@ -124,7 +124,7 @@ async def get_thumb(videoid):
 
             image4 = ImageDraw.Draw(image2)
             image4.text(
-                (10, 10), "CODRA MUSIC ", fill="white", font=font1, align="left"
+                (10, 10), "VeGa MUSIC ", fill="white", font=font1, align="left"
             )
             image4.text(
                 (670, 150),
