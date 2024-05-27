@@ -36,11 +36,6 @@
         "description": "⦗ اســـم التطبيـــق - نفـس اول مربـع بالقائمـة نسـخ لصـق حـروف انكلـش سمــول ⦗ صغيـره فقـط",
         "value": "",
         "required": false
-      },
-      "LOGGER_ID": {
-        "description": "ايـدي قروب السـجل",
-        "value": "-100",
-        "required": true
       }
     },
     "buildpacks": [
