@@ -41,15 +41,15 @@ def stream_markup_timer(_, chat_id, played, dur):
     elif 10 < umm < 20:
         bar = "──⧂━━━━━━━━━━━"
     elif 20 <= umm < 30:
-        bar = "───⧂━━━━━━━━━━"
-    elif 30 <= umm < 40:
         bar = "────⧂━━━━━━━━━"
-    elif 40 <= umm < 50:
+    elif 30 <= umm < 40:
         bar = "─────⧂━━━━━━━━"
-    elif 50 <= umm < 60:
+    elif 40 <= umm < 50:
         bar = "──────⧂━━━━━━━"
-    elif 60 <= umm < 70:
+    elif 50 <= umm < 60:
         bar = "────────⧂━━━━━"
+    elif 60 <= umm < 70:
+        bar = "─────────⧂━━━"
     elif 70 <= umm < 80:
         bar = "──────────⧂━━━"
     elif 80 <= umm < 95:
@@ -57,7 +57,7 @@ def stream_markup_timer(_, chat_id, played, dur):
     else:
         bar = "─────────────⧂"
     buttons = [
-        [
+                        [
             InlineKeyboardButton(
                 text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
@@ -82,7 +82,12 @@ def stream_markup_timer(_, chat_id, played, dur):
 
 def stream_markup(_, chat_id):
     buttons = [
-        [
+                [
+            InlineKeyboardButton(
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
+        ],[
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
