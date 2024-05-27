@@ -9,4 +9,4 @@ COPY . /app/
 WORKDIR /app/
 RUN pip3 install --no-cache-dir -U -r VeGaMenTs.txt
 
-CMD start VeGa
+CMD bash VeGa
