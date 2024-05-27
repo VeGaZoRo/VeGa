@@ -9,6 +9,7 @@ from VeGaMusic.utils.formatters import time_to_seconds
 
 
 def track_markup(_, videoid, user_id, channel, fplay):
+   
     buttons = [
         [
             InlineKeyboardButton(
@@ -28,6 +29,7 @@ def track_markup(_, videoid, user_id, channel, fplay):
         ],
     ]
     return buttons
+
 
 def stream_markup_timer(_, chat_id, played, dur):
     played_sec = time_to_seconds(played)
@@ -77,6 +79,7 @@ def stream_markup_timer(_, chat_id, played, dur):
     ]
     return buttons
 
+
 def stream_markup(_, chat_id):
     buttons = [
         [
@@ -102,11 +105,11 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
-                callback_data=f"VeGayPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
+                callback_data=f"ModyPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
                 text=_["P_B_2"],
-                callback_data=f"VeGayPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
+                callback_data=f"ModyPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
             ),
         ],
         [
@@ -160,7 +163,7 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
                 callback_data=f"forceclose {query}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="▷",
+                text="𖣂 𝒓𝒆𝒔𝒖𝒎𝒆 𖣂",
                 callback_data=f"slider F|{query_type}|{query}|{user_id}|{channel}|{fplay}",
             ),
         ],
