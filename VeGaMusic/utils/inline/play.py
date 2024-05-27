@@ -3,7 +3,7 @@ from config import *
 import config
 from pyrogram.types import InlineKeyboardButton
 
-from VeGaXMusic.utils.formatters import time_to_seconds
+from VeGaMusic.utils.formatters import time_to_seconds
 
 
 def track_markup(_, videoid, user_id, channel, fplay):
