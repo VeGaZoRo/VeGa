@@ -4,6 +4,7 @@ asyncio
 beautifulsoup4
 dnspython
 ffmpeg-python
+lyricsgenius
 gitpython
 hachoir
 heroku3
