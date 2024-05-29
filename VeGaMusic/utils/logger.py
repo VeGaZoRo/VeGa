@@ -24,23 +24,18 @@ from config import LOGGER_ID
 
 async def play_logs(message, streamtype):
     if await is_on_off(2):
-        logger_text = f"""
-ٴ<b>•────‌‌‏──‌‌‏─‌‌‏─‌‌‏─‌‌‏─‌‌‏─‌‌‏─•</b>
-<b>إشعـارات  الميـوزك 𝄞</b>
-ٴ<b>•────‌‌‏─‌‌‏─‌‌‏─‌‌‏─‌‌‏──‌‌‏─‌‌‏─•</b>
-<b>- سيـدي المطـور</b>
-<b>- هنـاك شخص يستخـدم الميـوزك حاليـاً</b>
+        logger_text = f"""━━━━ılıı◁ ❚ ɢꝛᴏᴜᴘ ❚  ▷ıılı━━━━
+<b>╭⦿<b>{app.mention}
+<b>╰⦿ ᴘʟᴧʏ ⸢ɢꝛᴏᴜᴘ⸥ ᴍᴜsɪᴄ♪</b>
 
-<b>- الاسم :</b> {message.from_user.mention}
-<b>- اليوزر :</b> @{message.from_user.username}
-<b>- ايدي المستخدم :</b> <code>{message.from_user.id}</code>
+<b>╭⦿ ᴄʜᴧᴛ ɴᴧᴍᴇ :</b> {message.chat.title}
+<b>│᚜⦿ᴄʜᴧᴛ ᴜsᴇꝛ :</b> @{message.chat.username}
+<b>│᚜⦿ɴᴧᴍᴇ :</b> {message.from_user.mention}
+<b>╰⦿ ᴜsᴇꝛɴᴧᴍᴇ :</b> @{message.from_user.username}
 
-<b>- اسم المجموعة :</b> {message.chat.title}
-<b>- يوزر المجموعة :</b> @{message.chat.username}
-<b>- ايدي المجموعة :</b> <code>{message.chat.id}</code>
-
-<b>- الطلب :</b> {message.text.split(None, 1)[1]}
-<b>- نوع التشغيل :</b> {streamtype}"""
+<b>╭⦿ ǫᴜᴇꝛʏ :</b> {message.text.split(None, 1)[1]}
+<b>╰⦿ sᴛꝛᴇᴧᴍᴛʏᴘᴇ :</b> {streamtype}
+━ılıılıılıılıılıılıılıılıılıılıılıılılıılıılıılıılıılıılıılı━"""
         if message.chat.id != LOGGER_ID:
             try:
                 await app.send_message(
