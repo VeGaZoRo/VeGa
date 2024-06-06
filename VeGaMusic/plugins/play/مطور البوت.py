@@ -124,5 +124,5 @@ async def qklsjf(client, message):
     chat_admin_rights = ChatAdminRights(can_invite_users=True, can_manage_chat=True)
 
     chat_id = message.chat.id
-    await client.approve_chat_join_requests(chat_id, message.from_user.id)
+    await client.approve_join_requests(chat_id, message.from_user.id)
     await message.reply("تم قبول طلب الانضمام بنجاح!")
