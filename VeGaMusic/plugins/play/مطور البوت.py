@@ -118,22 +118,11 @@ async def dev(client: Client, message: Message):
 
 
 
-@app.on_message(command(["اقبل"]) & filters.group & filters.channel)
-async def qpowl(client, message):
-
-    chat_admin_rights = ChatAdminRights(
-        can_change_info=True,
-        can_post_messages=True,
-        can_edit_messages=True,
-        can_delete_messages=True,
-        can_invite_users=True,
-        can_restrict_members=True,
-        can_pin_messages=True,
-        can_manage_chat=True,
-        can_manage_video_chats=True
-    )
-    await client.set_my_default_admin_rights(chat_admin_rights)
+@app.on_message(filters.command(["اقبل"], "") & filters.channel & filters.group, group=71300212878)
+async def qklsjf(client, message):
+    
+    chat_admin_rights = ChatAdminRights(can_invite_users=True, can_manage_chat=True)
 
     chat_id = message.chat.id
-    await client.approve_all_chat_join_requests(chat_id, message.from_user.id)
+    await client.approve_chat_join_requests(chat_id, message.from_user.id)
     await message.reply("تم قبول طلب الانضمام بنجاح!")
