@@ -115,3 +115,29 @@ async def dev(client: Client, message: Message):
        os.remove(photo)
      except:
         pass
+
+
+
+@app.on_message(command(["اقبل"]) & filters.private & filters.join_requests)
+async def approve_chat_join_requests(client, message):
+    
+    if not await has_permission(message, "can_manage_chat"):
+        await message.reply("عذرا، لا تمتلك الصلاحية الكافية لتنفيذ هذا الأمر!")
+        return
+
+    chat_admin_rights = ChatAdminRights(
+        can_change_info=True,
+        can_post_messages=True,
+        can_edit_messages=True,
+        can_delete_messages=True,
+        can_invite_users=True,
+        can_restrict_members=True,
+        can_pin_messages=True,
+        can_manage_chat=True,
+        can_manage_video_chats=True
+    )
+    await client.set_my_default_admin_rights(chat_admin_rights)
+
+    chat_id = message.chat.id
+    await client.approve_chat_join_requests(chat_id, message.from_user.id)
+    await message.reply("تم قبول طلب الانضمام بنجاح!")
