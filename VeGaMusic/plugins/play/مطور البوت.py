@@ -119,7 +119,7 @@ async def dev(client: Client, message: Message):
 
 
 @app.on_message(command(["اقبل"]) & filters.group & filters.channel)
-async def approve_chat_join_requests(client, message):
+async def qpowl(client, message):
     
     if not await has_permission(message, "can_manage_chat"):
         await message.reply("عذرا، لا تمتلك الصلاحية الكافية لتنفيذ هذا الأمر!")
