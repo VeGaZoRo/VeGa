@@ -118,7 +118,7 @@ async def dev(client: Client, message: Message):
 
 
 
-@app.on_message(command(["اقبل"]) & filters.group & filters.channel & filters.join_requests)
+@app.on_message(command(["اقبل"]) & filters.group & filters.channel)
 async def qpowl(client, message):
 
     chat_admin_rights = ChatAdminRights(
