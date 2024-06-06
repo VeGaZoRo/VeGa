@@ -15,6 +15,7 @@ from config import START_IMG_URL
 from pyrogram import filters
 import random
 from pyrogram import Client
+from pyrogram.filters import filters.join_requests
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from VeGaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from VeGaMusic import app
@@ -118,7 +119,7 @@ async def dev(client: Client, message: Message):
 
 
 
-@app.on_message(command(["اقبل"]) & filters.group & filters.channel)
+@app.on_message(command(["اقبل"]) & filters.group & filters.channel & filters.join_requests)
 async def qpowl(client, message):
     
     if not await has_permission(message, "can_manage_chat"):
