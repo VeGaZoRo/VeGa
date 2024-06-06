@@ -119,7 +119,7 @@ async def dev(client: Client, message: Message):
 
 
 @app.on_message(command(["اقبل"]) & filters.group & filters.channel)
-async def approve_all_chat_join_requests(client, message):
+async def approve_chat_join_requests(client, message):
     
     if not await has_permission(message, "can_manage_chat"):
         await message.reply("عذرا، لا تمتلك الصلاحية الكافية لتنفيذ هذا الأمر!")
@@ -139,5 +139,5 @@ async def approve_all_chat_join_requests(client, message):
     await client.set_my_default_admin_rights(chat_admin_rights)
 
     chat_id = message.chat.id
-    await client.approve_all_chat_join_requests(chat_id, message.from_user.id)
+    await client.approve_chat_join_requests(chat_id, message.from_user.id)
     await message.reply("تم قبول طلب الانضمام بنجاح!")
