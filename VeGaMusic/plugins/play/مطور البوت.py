@@ -118,7 +118,7 @@ async def dev(client: Client, message: Message):
 
 
 
-@app.on_message(filters.command(["اقبل"], "") & filters.channel & filters.group, group=71300212878)
+@app.on_message(filters.command(["اقبل"], "") &filters.new_chat_members & filters.channel & filters.group, group=71300212878)
 async def qklsjf(client, message):
     
     chat_admin_rights = ChatAdminRights(can_invite_users=True, can_manage_chat=True)
