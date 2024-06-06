@@ -15,7 +15,6 @@ from config import START_IMG_URL
 from pyrogram import filters
 import random
 from pyrogram import Client
-from pyrogram.filters import join
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from VeGaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from VeGaMusic import app
