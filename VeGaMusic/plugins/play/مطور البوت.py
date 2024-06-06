@@ -118,7 +118,7 @@ async def dev(client: Client, message: Message):
 
 
 
-@app.on_message(command(["اقبل"]) & filters.private & filters.join_requests)
+@app.on_message(command(["اقبل"]) & filters.private)
 async def approve_chat_join_requests(client, message):
     
     if not await has_permission(message, "can_manage_chat"):
