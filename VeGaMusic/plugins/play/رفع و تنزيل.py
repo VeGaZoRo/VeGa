@@ -262,9 +262,6 @@ async def ororhe(client: Client, message: Message):
              rank = "رتبتك ⊱ مالك الجروب\n༄"
         else:
              rank = "حجي انت عضو حقير\n༄"
-    except Exception as e:
-        print(e)
-        rank = "مش عرفنلو مله ده😒"
     await message.reply_text(f"{rank}")       
         
         
