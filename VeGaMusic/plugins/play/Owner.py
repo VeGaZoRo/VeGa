@@ -6,11 +6,14 @@ import aiohttp
 from VeGaMusic.plugins.play.filters import command
 from pyrogram import filters
 from pyrogram import Client
+from pyrogram import enums
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from VeGaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from VeGaMusic import app
 from asyncio import gather
 from pyrogram.errors import FloodWait
+from pyrogram.enums import ChatMemberStatus
+
 
 @app.on_message(command(["المالك", "صاحب الخرابه", "المنشي"]), group=222)
 async def ownner(client: Client, message: Message):
