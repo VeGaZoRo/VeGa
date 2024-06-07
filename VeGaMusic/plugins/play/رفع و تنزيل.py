@@ -236,32 +236,22 @@ async def mallekandv(client, message):
         
         
         
-@app.on_message(command(['رتبتي']), group=2889933100)
-async def ororhe(client: Client, message: Message):
-    me = await client.get_me()
-    bot_username = me.username
-    bot_name = me.first_name
-    italy = message.from_user.mention
-    button = InlineKeyboardButton("ᴠᴇɢᴀ", url=f"https://t.me/vegaone")
-    keyboard = InlineKeyboardMarkup([[button]])
-    user_id = message.from_user.id
-    chat_id = message.chat.id
-    try:
-        member = await client.get_chat_member(chat_id, user_id)
-        if user_id == 6753126490:
-             rank = "رتبتك ⊱ صاحب سورس فيجا\n༄"
-        elif is_malleka(user_id):    
-             rank = "رتبتك ⊱ مالك في الجروب\n༄"
-        elif user_id == OWNER_ID:
-             rank = "رتبتك ⊱ مطور البوت\n༄"
-        elif is_mutornn(user_id):    
-             rank = "رتبتك ⊱ ادمن\n༄ "     
-        elif ChatMemberStatus.ADMINISTRATOR:
-             rank = "حجي انت عضو حقير\n༄"            
-        elif ChatMemberStatus.OWNER:
-             rank = "رتبتك ⊱ مالك الجروب\n༄"
-        else:
-             rank = "حجي انت عضو حقير\n༄"
-    await message.reply_text(f"{rank}")       
-        
-        
+@app.on_message(
+    command(["رتبتي"])
+    & filters.group
+)
+async def rotba(client, message):
+    dev = (OWNER_ID)
+    ze = (6753126490)
+    get = await client.get_chat_member(message.chat.id, message.from_user.id)
+    if int(message.from_user.id) == ze:
+       rotba= "مّمٌَـبـ ـࢪمـج السوࢪس"
+    elif message.from_user.id in dev:
+        rotba = "مطور اساسي"
+    elif get.status in [ChatMemberStatus.ADMINISTRATOR]:
+        rotba= "أدمــــن"
+    elif get.status in [ChatMemberStatus.OWNER]:
+        rotba= "المــــــألك"
+    else:
+         rotba = "عضــو جميل"
+    await message.reply_text(f"رتبتك في هذه المجموعه \nهــي ← «{rotba}»")
