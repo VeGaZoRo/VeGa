@@ -24,19 +24,23 @@ from pyrogram.errors import FloodWait
 
 
 
-@app.on_message(command(["المالك", "صاحب الخرابه", "المنشي"]), group=222)
+#المالك ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+
+
+@app.on_message(filters.command(["المالك", "صاحب الخرابه", "المنشي"], ""), group=95)
 async def ownner(client: Client, message: Message):
     x = []
-    async for m in client.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
+    msg = await message.reply("🎖")
+    await sleep(2)
+    await msg.delete()
+    async for m in app.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
          if m.status == ChatMemberStatus.OWNER:
             x.append(m.user.id)
     if len(x) != 0:        
-       m = await client.get_users(int(x[0]))
+       m = await app.get_users(int(x[0]))
        if m.photo:
          async for photo in app.get_chat_photos(x[0],limit=1):
-          await message.reply_photo(
-          photo.file_id,  caption=f"**⤄الاسم: {message.from_user.mention}\n⤄اليوزر: @{message.from_user.username}\n⤄ايدي:`{message.from_user.id}`\n⤄جروب: {message.chat.title}\n⤄ايدي الجروب : `{message.chat.id}`**",
-          reply_markup=InlineKeyboardMarkup(
+          await message.reply_photo(photo.file_id,caption=f"<b>╭✪ᚐɴᴧᴍᴇ : {m.first_name}\n│᚜✦ᴜsᴇꝛ : @{m.username}\n╰✪ᚐɪᴅ : <code>{m.id}</code>\n╭✪ᚐᴄʜᴧᴛ : {message.chat.title}\n╰✪ᚐɪᴅ.ᴄʜᴧᴛ : <code>{message.chat.id}</code></b>",reply_markup=InlineKeyboardMarkup(
              [              
                [          
                  InlineKeyboardButton(m.first_name, url=f"https://t.me/{m.username}")
@@ -45,17 +49,9 @@ async def ownner(client: Client, message: Message):
             )                     
           )
        else:
-        await message.reply_text(f"**⤄الاسم: {message.from_user.mention}\n⤄اليوزر: @{message.from_user.username}\n⤄ايدي:`{message.from_user.id}`\n⤄جروب: {message.chat.title}\n⤄ايدي الجروب : `{message.chat.id}`**", 
-        reply_markup=InlineKeyboardMarkup(
-            [
-               [
-            InlineKeyboardButton(m.first_name, url=f"https://t.me/{m.username}")
-               ],
-            ]
-          )
-        )
+        await message.reply_text(f"b>╭✪ᚐɴᴧᴍᴇ : {m.first_name}\n│᚜✦ᴜsᴇꝛ : @{m.username}\n╰✪ᚐɪᴅ : <code>{m.id}</code>\n╭✪ᚐᴄʜᴧᴛ : {message.chat.title}\n╰✪ᚐɪᴅ.ᴄʜᴧᴛ : <code>{message.chat.id}</code></b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(m.first_name, url=f"https://t.me/{m.username}")],]))
     else:
-        await message.reply_text("الاك محذوف يقلب")
+        await message.reply_text("عزيزي المالك هذا حساب محذوف\n༄")
 
 iddof = []
 @app.on_message(command(["قفل الايدي", "تعطيل الايدي"]), group=2272)
