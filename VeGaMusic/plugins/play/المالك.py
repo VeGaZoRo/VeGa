@@ -30,9 +30,6 @@ from pyrogram.errors import FloodWait
 @app.on_message(command(["المالك", "صاحب الخرابه", "المنشي"]), group=95)
 async def ownner(client: Client, message: Message):
     x = []
-    msg = await message.reply("🎖")
-    await sleep(2)
-    await msg.delete()
     async for m in app.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
          if m.status == ChatMemberStatus.OWNER:
             x.append(m.user.id)
