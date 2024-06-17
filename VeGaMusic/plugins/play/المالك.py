@@ -27,11 +27,11 @@ from pyrogram.errors import FloodWait
 @app.on_message(command(["المالك", "صاحب الخرابه", "المنشي"]), group=222)
 async def ownner(client: Client, message: Message):
     x = []
-    async for m in app.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
+    async for m in client.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
          if m.status == ChatMemberStatus.OWNER:
             x.append(m.user.id)
     if len(x) != 0:        
-       m = await app.get_users(int(x[0]))
+       m = await client.get_users(int(x[0]))
        if m.photo:
          async for photo in app.get_chat_photos(x[0],limit=1):
           await message.reply_photo(
