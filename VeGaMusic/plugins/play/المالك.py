@@ -27,7 +27,7 @@ from pyrogram.errors import FloodWait
 #المالك ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 
 
-@app.on_message(filters.command(["المالك", "صاحب الخرابه", "المنشي"], ""), group=95)
+@app.on_message(command(["المالك", "صاحب الخرابه", "المنشي"]), group=95)
 async def ownner(client: Client, message: Message):
     x = []
     msg = await message.reply("🎖")
