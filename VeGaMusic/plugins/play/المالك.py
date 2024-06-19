@@ -168,3 +168,21 @@ async def kas(client, message):
             ]
         ),
                              )
+
+
+
+@app.on_message(command(["زيرو","زي"]), group=666)
+async def kas(client, message):
+    usr = await client.get_chat("TopVeGa")
+    name = usr.first_name
+    photo = await app.download_media(usr.photo.big_file_id)
+    await message.reply_photo(photo,       caption=f"ɴᴀᴍᴇᚐ: {name}\nᴜsᴇʀᚐ: @{usr.username}\nɪᴅᚐ: `{usr.id}`\nʙɪᴏᚐ: {usr.bio}", 
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{usr.username}")
+                ],
+            ]
+        ),
+    )
