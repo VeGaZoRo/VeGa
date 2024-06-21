@@ -11,7 +11,7 @@ from VeGaMusic.misc import sudo
 from VeGaMusic.plugins import ALL_MODULES
 from VeGaMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
-
+from VeGaMusic.plugins.play.azan import azkar
 
 #──██████──────██████───█████████████──────██████████████───████████████████─────────
 #──██──██──────██──██───██─────────██────██────────────██───██────────────██─────────
