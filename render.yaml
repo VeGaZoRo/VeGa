@@ -12,10 +12,6 @@ services:
     startCommand: python3 -m VeGaMusic
     region: Virginia
     envVars:
-      - key: APP_ID 
-        sync: false
-      - key: API_HASH 
-        sync: false
       - key: STRING_SESSION
         sync: false
       - key: BOT_TOKEN
