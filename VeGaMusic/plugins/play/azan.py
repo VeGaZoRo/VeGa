@@ -44,7 +44,7 @@ async def kill():
 
 
 async def play(i):
-  assistant = await group_assistant(Zoro,i) هنا برشوو
+  assistant = await group_assistant(Zoro,i)
   file_path = "VeGaMusic/assets/azan.m4a"
   stream = AudioPiped(file_path, audio_parameters=HighQualityAudio())
   try:
